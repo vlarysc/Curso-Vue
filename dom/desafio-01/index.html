@@ -5,7 +5,7 @@
     <p> {{ title }} 
         <hr>
         {{ titulo }} 
-        {{ idade }} 
+        ({{ idade }}) 
         {{ titulo2 }} </p>
     <!-- <p>Usando VueJS - SEU_NOME (IDADE)</p> -->
     <h1></h1>
@@ -29,7 +29,7 @@
     <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
     <div class="caixa-input">
         <hr>
-        <input color: red type="text" v-on:input="alterarTitulo">  Mude o nome</div>
+        <input color: red type="text" value="Digite seu nome aqui" v-on:input="alterarTitulo">
     </div>
 </div>
 <script src="app.js"></script>
