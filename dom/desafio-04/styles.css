@@ -33,3 +33,17 @@
 .cor2{
 	color: rgb(40, 182, 123);
 }
+
+.direita{
+	float: right;
+}
+
+.barra{
+	height: 40px;
+	width: 400px;
+	border: 1px solid yellowgreen;
+}
+.progresso{
+	background-color: rgb(56, 241, 56);
+	height: 100%;
+}
