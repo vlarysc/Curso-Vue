@@ -18,7 +18,11 @@
                {{ index +1 }}) {{ chave }}: {{ valor }} &#128073; &#129464; &#128072;
             </div>
         </li>
-    </ul>   
+    </ul> 
+    <hr>
+    <ul class="test">
+        <li v-for="n in 10">{{ n }}</li>
+    </ul>  
 </div>
 
 <script>
@@ -52,5 +56,9 @@
  .emojis {
      color: rgb(78, 211, 235);
      display: flex;
+ }
+
+ .test {
+     color: rgb(255, 85, 170);
  }
 </style>

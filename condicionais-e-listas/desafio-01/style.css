@@ -1,0 +1,17 @@
+* {
+    background-color: rgb(191, 211, 216);
+    
+}
+
+.button {
+    box-sizing: content-box;
+    font-size: 20px;
+    display: flex;
+    margin-left: 50px;
+    color: deeppink;
+    background-color: rgb(180, 173, 173);
+}
+
+.p {
+    font-size: 20px;
+}

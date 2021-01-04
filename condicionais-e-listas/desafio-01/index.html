@@ -1,0 +1,78 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<div id="desafio">
+  <!-- 1) Ligue o botão para alternar a exibição dos dois
+    parágrafos. Use ambos v-if e v-show e inspecione os elementos
+    para ver a diferença -->
+    <h2>#01</h2>
+  <div class="p">
+    <button class="button" @click="logado = !logado"> {{ logado ? "Sair" : "Entrar" }} </button>
+    <p v-if="logado">Você entrou</p>
+    <p v-else="!logado">Você saiu</p>
+    <p v-show="logado">Você entrou!</p>
+    <p v-show="!logado">Você saiu!</p>
+  </div>
+  
+  <!-- 2) Exiba em uma <ul> um array de elementos da sua escolha.
+    Imprima também o índice de cada elemento. -->
+    <h2>#02</h2>
+    <ul>
+      <li v-for="(curso, i) in cursos"> &#127775; {{ i +1 }}) {{ curso }} </li>
+    </ul>
+  
+    <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir:
+      {
+			titulo: 'O Senhor dos Anéis',
+			autor: 'J.R.R. Tolkiens',
+			volume: '3'
+		}
+    Imprima também o índice de cada item. -->
+  <h2>#03</h2>
+  <ul class="seila">
+    <li v-for="(valor, chave, index) in livro">
+      &#10149;{{ index +1 }}) {{ chave }}: {{ valor }}
+    </li>
+  </ul>
+  
+  <!-- 4) Imprima o seguinte objeto (somente os valores) e
+    também crie um loop aninhado para o array:
+    {
+			id: 10,
+			nome: 'Maria',
+			notas: [7.67, 8.33, 6.98, 9.21]
+		}
+    (dica: use v-for e v-if na resolução) -->
+    <h2>#04</h2>
+    <ul>
+      <li v-for="valor in aluno"> 
+        <template v-if="!Array.isArray(valor)">
+          *{{ valor }}          
+        </template> 
+        <template v-else>
+          *Notas:
+          <ul>
+            <li class="reto" v-for="nota in valor"> &#9989;{{ nota }} </li>
+          </ul>
+        </template>
+
+      </li>
+    </ul>
+  </div>
+  <style>
+    ul {
+    list-style: none;
+    color: blueviolet;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  .seila {
+    color: rgb(0, 80, 0);
+  }
+  .reto{
+    display: flex;
+    justify-content: space-between;
+  }
+  </style>
+  <script src="app.js"></script>
+  

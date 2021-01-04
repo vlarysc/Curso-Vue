@@ -1,0 +1,78 @@
+<meta charset="UTF-8" />
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <ul>
+    <li v-for="(cor, i) in cores"
+    :key="cor">{{ i + 1 }}° {{ cor }}</li>
+  </ul>
+  <button class="tamanho" @click="cores.push('branco')">Adicionar cor</button>
+
+
+  <hr>
+
+  <template v-for="(cor, i) in cores">
+    <h1>{{ i }})</h1>
+    <h1>{{ cor }}</h1>
+  </template>
+  <hr />
+  <ul>
+    <li v-for="pessoa in pessoas">
+      <div class="emojis" v-for="(valor, chave, index) in pessoa">
+        {{ index +1 }}) {{ chave }}: {{ valor }} &#128073; &#129464; &#128072;
+      </div>
+    </li>
+  </ul>
+  <hr />
+  <ul class="test">
+    <li v-for="n in 10">{{ n }}</li>
+  </ul>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      cores: ["Vermelho", "Verde", "Azul", "Amarelo"],
+      pessoas: [
+        { nome: "Ana ", idade: "26", peso: "76" },
+        { nome: "Neto", idade: "27", peso: "70" }
+      ]
+    }
+  });
+</script>
+
+<style>
+  ul {
+    list-style: none;
+    color: blueviolet;
+    box-sizing: border-box;
+    font-size: 36px;
+  }
+
+  h1,
+  p {
+    display: inline;
+    color: brown;
+    border: 2px ridge burlywood;
+  }
+
+  .emojis {
+    color: rgb(78, 211, 235);
+    display: flex;
+  }
+
+  .test {
+    color: rgb(255, 85, 170);
+  }
+
+.tamanho {
+    box-sizing: content-box;
+    font-size: 20px;
+    display: flex;
+    padding: 01rem;
+    margin-left: 50px;
+    color: deeppink;
+    background-color: rgb(180, 173, 173);
+}
+</style>
