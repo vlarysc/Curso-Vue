@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>Matador de Monstro</title>
+</head>
+
+<body background="./img/x1080.jpg">
+    <div id="projeto">
+        <div class="container vidas">
+            <div class="unidades">
+                <h1>&#129497; Jogador</h1>
+                <div class="barra">
+                    <div class="vida" :class="{critica: vjogador < 20}" :styel="{width: vjogador + '%'}"></div>
+                </div>
+                <div> {{ vjogador }} HP </div>
+            </div>
+            <div class="unidades">
+                <h1>&#128126; Monstro</h1>
+                <div class="barra">
+                    <div class="vida" :class="{critica: vmonstro < 20}" :styel="{width: vmonstro + '%'}"></div>
+                </div>
+                <div> {{ vmonstro }} HP </div>
+            </div>
+        </div>
+        <div v-if="hasResult" class="container result">
+            <div v-if="vmonstro == 0" class="win">Você Ganhou!!! &#129321; </div>
+            <div v-else="vjogador == 0" class="lose">Você Perdeu! &#129402; </div>
+    </div>
+    <div class="container botao">
+        <button v-if="!jogar" class="btn ataque">ATAQUE</button>
+        <button v-if="!jogar" class="btn ataque-especial">ATAQUE ESPECIAL</button>
+        <button v-if="!jogar" class="btn curar">CURAR</button>
+        <button v-if="jogar" @click="jogar = !jogar" class="btn novo-jogo"> {{ jogar ? 'NOVO JOGO' : 'JOGAR' }}</button>
+        <button v-if="!jogar" @click="jogar = !jogar" class="btn desistir">DESISTIR</button>
+    </div>
+    <div class="container historico"></div>
+    </div>
+    <script src="ap.js"></script>
+</body>
+
+</html>

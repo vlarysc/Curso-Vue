@@ -1,0 +1,97 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#projeto {
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.95);
+}
+
+.vidas {
+    display: flex;
+}
+
+.unidades {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra{
+    width: 80%;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.vida{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    background-color: rgb(25, 251, 25);
+    border-radius: 50px;
+}
+
+.barra .vida.critica {
+    background-color: red;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-style: inherit;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border-radius: 50px;
+}
+
+.novo-jogo{
+    background-color: blue;
+    color: white;
+}
+
+.ataque {
+    background-color: red;
+    color: white;
+}
+
+.ataque-especial{
+    background-color: rgb(255, 123, 0);
+    color: white;
+}
+
+.curar {
+    background-color: green;
+    color: white;
+}
+
+.desistir{
+    background-color: gray;
+    color: white;
+}
+
+
+
