@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div class="" id="app1">
+    {{ titulo }} {{ nova }}
+    <button @click="alterar"> Alterar </button>
+</div>
+
+<script>
+  const vm =  new Vue({
+        el: '#app1',
+        data: {
+            titulo: 'Teste 1'
+        },
+        methods: {
+            alterar() {
+                this.titulo += '?!?'
+            }
+        }
+    })
+/*  Erro proposital  */
+
+    vm.nova = 'ola'
+    console.log('nova')
+</script>
