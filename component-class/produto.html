@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Troco</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Calculadora de Troco</h1>          
+        <form action="" method="post">
+            N1: <input type="text" id="n1" value="10" /> <br> N2: <input type="text" id="n2" value="5" onblur="calcular()" /> <br>
+          </form>          
+          <div id="resultado"></div>
+          <p class="p">Resultado</p>
+    </div>
+
+    <script>
+        function calcular() {
+            var n1 = parseInt(document.getElementById('n1').value, 10);
+            var n2 = parseInt(document.getElementById('n2').value, 10);
+            document.getElementById('resultado').innerHTML = n1 + n2;
+        }
+    </script>
+
+    <style>
+        #app{
+            
+            justify-content: center;
+        }
+        #resultado {     
+            display: flex;   
+            margin-left: 100px;
+            margin-top: 50px;    
+            color: white;
+            width: 50px;
+            height: 50px;
+            border: 1px solid orange;
+            background-color: orange;
+            border-radius: 50px;
+            font-size: 45px;
+        }
+        .p {
+            display: flex;   
+            margin-left: 50px; 
+            width: 50px;
+            height: 50px;
+            font-size: 45px;
+
+        }
+    </style>
+    
+</body>
+</html>
